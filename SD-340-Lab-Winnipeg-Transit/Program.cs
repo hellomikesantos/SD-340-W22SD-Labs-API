@@ -1,14 +1,20 @@
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-app.MapGet("/", () =>
+
+app.MapGet("/route:number", () =>
 {
-    return "Hello world.";
+    return;
 });
 
-app.MapGet("/happy", () =>
+app.MapGet("/stop:number", () =>
 {
-    return "It is happy";
+    return;
+});
+
+app.MapGet("/stopschedule:number", () =>
+{
+    return;
 });
 
 app.Run();
